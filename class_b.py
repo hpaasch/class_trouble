@@ -4,28 +4,19 @@ from class_a import ClassnameA
 class ClassnameB:
     def __init__(self):
         self.classname_a = ClassnameA()
-        self.newcar = ClassnameA.method_one()
-        self.newboat = ClassnameA.method_two()
-        self.newhouse = ClassnameA.method_three()
-        self.tools = []
+        self.new_car_variable = self.classname_a.car
+        self.new_car_method_value = self.classname_a.method_one()
 
-    def method_four(self):
-        self.tools = ['hammer', 'nails', 'saw']
-        return self.tools
-
-    def method_five(self):
-        ClassnameA.method_one()
-        newest_price = self.newcar() + 50
+    def method_two(self):
+        newest_price = self.new_car_method_value + 50
         return newest_price
-
-
 
 
 # ------------------------
 # below is only for output testing
 
 heptest_b = ClassnameB()
-print(heptest_b.method_five())
-# print(heptest_b.newcar)
-# print(heptest_b.method_four())
+print(heptest_b.new_car_variable)  # >>> prints 0
+print(heptest_b.new_car_method_value)  # >>> prints 100
+print(heptest_b.method_two())  # >>> prints 150
 
