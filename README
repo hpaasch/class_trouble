@@ -1,0 +1,16 @@
+Make ClassnameA work all by itself, with no global or class variables.
+Can import from classes that you will NOT also need to import for the new ClassnameB.
+
+Any value you will need in another class should be the return value for a method
+in ClassnameA.
+
+To use ClassnameA and its methods and variables in ClassnameB:
+	1. Import the ClassnameA file.
+	2. In the __init__ method of ClassnameB, create a self.variable that is the
+        whole class, create a self.variable for any value you want to use.
+	3. Then use the self.variables created in the __init__ of the new class.
+
+You can't have circular imports, with ClassA importing ClassB and then ClassB
+importing ClassA.
+
+See the class_b file for syntax examples and output examples.
